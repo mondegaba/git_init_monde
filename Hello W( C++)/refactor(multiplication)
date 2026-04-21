@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class MultiplicationTable {
+public:
+    // General method: handles normal, range, and reverse
+    void printTable(int number, int start = 1, int end = 10, bool reverse = false) {
+        if (reverse) {
+            for (int i = end; i >= start; i--) {
+                cout << number << " x " << i << " = " << number * i << endl;
+            }
+        } else {
+            for (int i = start; i <= end; i++) {
+                cout << number << " x " << i << " = " << number * i << endl;
+            }
+        }
+    }
+};
+
+int main() {
+    MultiplicationTable table;
+
+    cout << "Table of 5 (default 1–10):" << endl;
+    table.printTable(5);
+
+    cout << "\nTable of 7 up to 15:" << endl;
+    table.printTable(7, 1, 15);
+
+    cout << "\nTable of 9 in reverse order:" << endl;
+    table.printTable(9, 1, 10, true);
+
+    return 0;
+}

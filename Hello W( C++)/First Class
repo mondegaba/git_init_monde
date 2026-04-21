@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+// Step 1: Define the class
+class Student {
+public:
+    // Step 2: Add members
+    string name;
+    int age;
+
+    // Step 3: Add a method
+    void displayInfo() {
+        cout << "Name: " << name << ", Age: " << age << endl;
+    }
+};
+
+int main() {
+    // Step 4: Create an object
+    Student s1;
+    s1.name = "Nomonde";
+    s1.age = 20;
+    
+    Student s2;
+    s2.name = "Thandeka";
+    s2.age = 24;
+    
+    Student s3;
+    s3.name = "Jack";
+    s3.age = 22;
+    
+    Student s4;
+    s4.name = "David";
+    s4.age = 21;
+
+    // Use the method
+    s1.displayInfo();
+    s2.displayInfo();
+    s3.displayInfo();
+    s4.displayInfo();
+
+    return 0;
+}

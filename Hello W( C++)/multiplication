@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class MultiplicationTable {
+public:
+    // Print table from 1 to 10
+    void printTable(int n) {
+        for (int i = 1; i <= 10; i++) {
+            cout << n << " x " << i << " = " << n * i << endl;
+        }
+    }
+
+    // Print table up to a custom range
+    void printTableRange(int n, int range) {
+        for (int i = 1; i <= range; i++) {
+            cout << n << " x " << i << " = " << n * i << endl;
+        }
+    }
+
+    // Print table in reverse order
+    void printTableReverse(int n) {
+        for (int i = 10; i >= 1; i--) {
+            cout << n << " x " << i << " = " << n * i << endl;
+        }
+    }
+};
+
+int main() {
+    MultiplicationTable table;
+
+    cout << "Table of 5 (default 1–10):" << endl;
+    table.printTable(5);
+
+    cout << "\nTable of 7 up to 15:" << endl;
+    table.printTableRange(7, 15);
+
+    cout << "\nTable of 9 in reverse order:" << endl;
+    table.printTableReverse(9);
+
+    return 0;
+}
